@@ -1,0 +1,29 @@
+package edu.gcccd.csis;
+
+import org.junit.Test;
+
+import java.math.BigInteger;
+
+import static org.junit.Assert.assertTrue;
+
+public class FibonacciNumTest {
+
+    @Test
+    public void fibonacci() {
+        final String ZERO_EXPECTED = "0";
+        final String ZERO_CALCULATED = String.valueOf(FibonacciNum.fibonacci(BigInteger.ZERO, BigInteger.ZERO, BigInteger.ONE));
+        assertTrue(ZERO_CALCULATED.equals(ZERO_EXPECTED));
+        final String TEN_EXPECTED = "55";
+        final String TEN_CALCULATED = String.valueOf(FibonacciNum.fibonacci(BigInteger.valueOf(10), BigInteger.ZERO, BigInteger.ONE));
+        assertTrue(TEN_CALCULATED.equals(TEN_EXPECTED));
+        final String HUNDRED_EXPECTED = "354224848179261915075";
+        final String HUNDRED_CALCULATED = String.valueOf(FibonacciNum.fibonacci(BigInteger.valueOf(100), BigInteger.ZERO, BigInteger.ONE));
+        assertTrue(HUNDRED_CALCULATED.equals(HUNDRED_EXPECTED));
+        final String FIVE_HUNDRED_EXPECTED = "139423224561697880139724382870407283950070256587697307264108962948325571622863290691557658876222521294125";
+        final String FIVE_HUNDRED_CALCULATED = String.valueOf(FibonacciNum.fibonacci(BigInteger.valueOf(500), BigInteger.ZERO, BigInteger.ONE));
+        assertTrue(FIVE_HUNDRED_CALCULATED.equals(FIVE_HUNDRED_EXPECTED));
+        final String TWO_THOUSAND_EXPECTED = "4224696333392304878706725602341482782579852840250681098010280137314308584370130707224123599639141511088446087538909603607640194711643596029271983312598737326253555802606991585915229492453904998722256795316982874482472992263901833716778060607011615497886719879858311468870876264597369086722884023654422295243347964480139515349562972087652656069529806499841977448720155612802665404554171717881930324025204312082516817125";
+        final String TWO_THOUSAND_CALCULATED = String.valueOf(FibonacciNum.fibonacci(BigInteger.valueOf(2000), BigInteger.ZERO, BigInteger.ONE));
+        assertTrue(TWO_THOUSAND_CALCULATED.equals(TWO_THOUSAND_EXPECTED));
+    }
+}
