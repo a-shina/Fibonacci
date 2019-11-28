@@ -1,1 +1,1 @@
-"# Fibonacci" 
+#### This java program generates fibonacci sequence using tail recursion, since it is faster and more efficient than regular recursion. Using my variables of *n, x, y*, when we pick a number for *n* to calculate the fibonacci number, *x* starts at 0 and *y* starts at 1 respectively. As *n* decreases by 1 in every recursive call, *x* changes to *y*  of (n + 1) and *y*  changes to the sum of *x* and *y*  of  (n + 1). As this process continues, when *n* becomes 1, the program returns *y*  as the answer for our fibonacci number.
